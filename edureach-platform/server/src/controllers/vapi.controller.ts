@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from "express";
-import User from "../models/user.model.ts";
-import { initiateOutboundCall } from "../services/vapi.service.ts";
+import User from "../models/user.model";
+import { initiateOutboundCall } from "../services/vapi.service";
 
 // POST /api/vapi/call
 export const startCall = async (req: Request, res: Response, next: NextFunction): Promise<void> => {

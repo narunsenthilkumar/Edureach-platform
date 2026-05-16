@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { startCall } from "../controllers/vapi.controller.ts";
-import authMiddleware from "../middleware/auth.middleware.ts";
+import { startCall } from "../controllers/vapi.controller";
+import authMiddleware from "../middleware/auth.middleware";
 
 const router = Router();
 

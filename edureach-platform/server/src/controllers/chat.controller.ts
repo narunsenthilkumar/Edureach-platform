@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
-import { getRAGResponse } from "../services/rag.service.ts";
+import { getRAGResponse } from "../services/rag.service";
 
 // POST /api/chat/message
 export const sendMessage = async (req: Request, res: Response, next: NextFunction): Promise<void> => {

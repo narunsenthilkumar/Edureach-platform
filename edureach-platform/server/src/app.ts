@@ -1,10 +1,10 @@
 import express from "express";
 import type { Application, Request, Response } from "express";
 import cors from "cors";
-import authRoutes from "./routes/auth.routes.ts";
-import chatRoutes from "./routes/chat.routes.ts";
-import errorHandler from "./middleware/error-handler.middleware.ts";
-import vapiRoutes from "./routes/vapi.routes.ts";
+import authRoutes from "./routes/auth.routes";
+import chatRoutes from "./routes/chat.routes";
+import errorHandler from "./middleware/error-handler.middleware";
+import vapiRoutes from "./routes/vapi.routes";
 
 const app: Application = express();
 

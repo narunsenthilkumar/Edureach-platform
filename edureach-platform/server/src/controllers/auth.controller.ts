@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
-import User from "../models/user.model.ts";
-import { hashPassword, comparePassword } from "../utils/password.util.ts";
-import { generateToken } from "../utils/jwt.util.ts";
+import User from "../models/user.model";
+import { hashPassword, comparePassword } from "../utils/password.util";
+import { generateToken } from "../utils/jwt.util";
 
 // POST /api/auth/register — Public — Create new account
 export const register = async (req: Request, res: Response, next: NextFunction): Promise<void> => {

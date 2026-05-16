@@ -1,6 +1,6 @@
-import app from "./app.ts";
-import connectDB from "./config/database.config.ts";
-import { initializeKnowledgeBase } from "./services/rag.service.ts";
+import app from "./app";
+import connectDB from "./config/database.config";
+import { initializeKnowledgeBase } from "./services/rag.service";
 
 const PORT = process.env.PORT || 5000;
 
