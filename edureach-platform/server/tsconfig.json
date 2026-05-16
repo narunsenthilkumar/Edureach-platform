@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
+    "rootDir": "src",
     "module": "es2020",
     "target": "es2020",
     "lib": ["es2020"],

@@ -5,7 +5,10 @@ Vercel deployment notes — client and server
 - In the Vercel dashboard, create a new project and import this repository.
 - Set the project root to `client` (so Vercel runs in `edureach-platform/client`).
 - Vercel will run `npm run build`. The existing `build` script runs `tsc -b && vite build`.
-- Ensure Node version matches (use Node 18+). Add any needed environment variables under Project Settings.
+- Set environment variables under Project Settings:
+  - `VITE_API_URL=https://<your-render-service>.onrender.com/api`
+  - `NODE_ENV=production`
+- Ensure Node version matches (use Node 18+).
 
 2) Server (Express + TypeScript)
 
@@ -17,5 +20,6 @@ Vercel deployment notes — client and server
 
 3) Notes
 
-- If you prefer a single Vercel project, you can set up a monorepo configuration and route `/api/*` to the server functions and the rest to the client static build.
+- This repo can now be deployed as two separate services: `client` on Vercel, and `server` on Render or another Node host.
+- The `server` is configured for Render-style deployment with a `Procfile`, `Dockerfile`, and a `/ping` endpoint for keep-alive pings.
 - After pushing changes, connect the project in Vercel and trigger a deploy. Monitor the build logs for errors.
